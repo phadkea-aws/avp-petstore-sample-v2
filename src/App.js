@@ -9,7 +9,7 @@ import { withAuthenticator,
   Flex,
   View,
   Text, 
-  Divider,Tabs, TabItem, Alert, TextField, Grid,TextAreaField,
+  Divider, Tabs, Alert, TextField, Grid,TextAreaField,
   useTheme} from '@aws-amplify/ui-react';
 import '@aws-amplify/ui-react/styles.css';
 import { useState } from 'react';
@@ -62,7 +62,7 @@ function App({ signOut, user }) {
             width="86%" minHeight="300px" boxShadow="3px 3px 5px 6px var(--amplify-colors-neutral-60)" opacity="90">
             
             <Tabs defaultIndex={0} >
-              <TabItem title="Action simulation">
+              <Tabs.Panel title="Action simulation">
                 <Grid templateColumns="1fr 1fr">
                   <View textAlign="left">
                   
@@ -130,7 +130,7 @@ function App({ signOut, user }) {
                     } value={authResult} /> 
                   </View>
                 </Grid>
-              </TabItem>
+              </Tabs.Panel>
             </Tabs>
             
           </View>
